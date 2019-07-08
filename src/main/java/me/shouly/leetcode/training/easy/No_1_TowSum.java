@@ -10,7 +10,7 @@ import java.util.HashMap;
  * @version v1.0
  * @date 2019-07-08 14:50
  */
-public class TowSum {
+public class No_1_TowSum {
 
   /**
    * @param nums
@@ -33,7 +33,7 @@ public class TowSum {
   }
 
   public static void main(String[] args) {
-    TowSum towSum = new TowSum();
+    No_1_TowSum towSum = new No_1_TowSum();
     int[] nums = new int[] {2, 7, 11, 15};
     System.out.println(Arrays.toString(towSum.towSum(nums, 9)));
   }
