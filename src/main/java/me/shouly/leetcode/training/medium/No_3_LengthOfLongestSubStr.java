@@ -68,7 +68,8 @@ public class No_3_LengthOfLongestSubStr {
 
   public static void main(String[] args) {
     String s = "askdfjasdk";
-    System.out.println(lengthOfLongestSubstring(s));
-    System.out.println(officialAns(s));
+    System.out.println(s.indexOf("askwwwww"));
+    //System.out.println(lengthOfLongestSubstring(s));
+    //System.out.println(officialAns(s));
   }
 }
