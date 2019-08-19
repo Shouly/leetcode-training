@@ -1,5 +1,7 @@
 package me.shouly.leetcode.training.multithread;
 
+import java.util.Arrays;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
@@ -43,6 +45,29 @@ public class Test {
                 e.printStackTrace();
               }
               countDownLatch.countDown();
+            })
+        .start();
+    new Thread(
+            () -> {
+              System.out.println("t3 started.");
+              try {
+                Thread.sleep(1000);
+                cyclicBarrier.await();
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
+            })
+        .start();
+
+    new Thread(
+            () -> {
+              System.out.println("t4 started.");
+              try {
+                cyclicBarrier.await();
+                Thread.sleep(1000);
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
             })
         .start();
 
